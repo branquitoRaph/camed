@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/20201tiimi0403/AndroidStudioProjects/camed/app/src/main/res/layout/activity_contato.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_contato.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_contatodeslogado.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/login.xml" value="0.358695652173913" />
       </map>
     </option>
   </component>
