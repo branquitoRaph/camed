@@ -17,13 +17,13 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextSenhaCadastro" />
 
     <TextView
-        android:id="@+id/textViewDadosPessoais"
+        android:id="@+id/textViewDadosDeEndereço"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="128dp"
-        android:text="Dados Pessoais"
+        android:text="Dados De Endereço"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,10 +38,10 @@
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nome"
+        android:text="Logradouro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDadosPessoais" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDadosDeEndereço" />
 
     <EditText
         android:id="@+id/editTextSobrenome"
@@ -52,7 +52,7 @@
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Sobrenome"
+        android:text="Tipo De Logradouro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
