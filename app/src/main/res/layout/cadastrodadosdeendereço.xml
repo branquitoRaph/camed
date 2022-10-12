@@ -9,19 +9,20 @@
         android:id="@+id/buttonDadosPessoais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Avançar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSenhaCadastro" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEstado" />
 
     <TextView
         android:id="@+id/textViewDadosDeEndereço"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="128dp"
         android:text="Dados De Endereço"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -34,7 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -48,7 +49,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -58,45 +59,87 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
 
     <EditText
-        android:id="@+id/editTextDataDeNascimento"
+        android:id="@+id/editTextNumero"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
-        android:inputType="date"
-        android:text="Data"
+        android:inputType="number"
+        android:text="Número"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextSobrenome" />
 
     <EditText
-        android:id="@+id/editTextEmailCadastro"
+        android:id="@+id/editTextCPF"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="Email"
+        android:inputType="number"
+        android:text="CPF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDataDeNascimento" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumero" />
 
     <EditText
-        android:id="@+id/editTextSenhaCadastro"
+        android:id="@+id/editTextComplemento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
-        android:inputType="textPassword"
-        android:text="Senha"
+        android:inputType="textPersonName"
+        android:text="Complemento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailCadastro" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCPF" />
+
+    <EditText
+        android:id="@+id/editTextBairro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Bairro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextComplemento" />
+
+    <EditText
+        android:id="@+id/editTextMunicipio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Município"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBairro" />
+
+    <EditText
+        android:id="@+id/editTextEstado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Estado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMunicipio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
