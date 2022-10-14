@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/editTextMensagemContato"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginStart="32dp"
@@ -64,7 +64,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
         android:text="Sugestão"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/editTextMensagemContato"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewContato" />
 
@@ -75,7 +75,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
         android:text="Elogio"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/editTextMensagemContato"
         app:layout_constraintEnd_toStartOf="@+id/checkBoxCritica"
         app:layout_constraintStart_toEndOf="@+id/checkBoxSugestao"
         app:layout_constraintTop_toBottomOf="@+id/textViewContato" />
@@ -88,7 +88,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="Critica"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/editTextMensagemContato"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewContato" />
 

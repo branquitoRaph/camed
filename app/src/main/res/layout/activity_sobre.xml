@@ -3,7 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".SobreActivity">
+
+    <TextView
+        android:id="@+id/textViewTextoGenerico1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico,"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVoltarSobre" />
+
+    <ImageView
+        android:id="@+id/imageViewImagemSobre2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoGenerico1"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
         android:id="@+id/textViewTextoGenerico2"
@@ -14,9 +38,8 @@
         android:layout_marginEnd="32dp"
         android:text="texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico,"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewImagemSobre" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewImagemSobre2" />
 
     <Button
         android:id="@+id/buttonVoltarSobre"
@@ -27,26 +50,4 @@
         android:text="Voltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewTexxtoSobre1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="32dp"
-        android:text="texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico,"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonVoltarSobre" />
-
-    <ImageView
-        android:id="@+id/imageViewImagemSobre"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTexxtoSobre1"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 </androidx.constraintlayout.widget.ConstraintLayout>

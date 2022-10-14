@@ -3,14 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_cadastro.xml" value="0.25" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_contato.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_contatodeslogado.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_medicamentos.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_mudar_perfil.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_perfil.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/activity_sobre.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/cadastrodadosdeendereço.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/cadastrodadospessoais.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/contato.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/home.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/login.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/medicamentos.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/mudar_email_senha_imagem.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/perfil.xml" value="0.358695652173913" />
         <entry key="..\:/Users/20201tiimi0101/AndroidStudioProjects/camed/app/src/main/res/layout/sobre.xml" value="0.358695652173913" />
       </map>
