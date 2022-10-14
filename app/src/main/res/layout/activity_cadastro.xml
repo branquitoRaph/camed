@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/textViewDadosPessoais2"
+                    android:id="@+id/textViewDadosPessoais"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="128dp"
@@ -51,7 +51,7 @@
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewDadosPessoais2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDadosPessoais" />
 
                 <EditText
                     android:id="@+id/editTextSobrenomeCadastro"
@@ -151,7 +151,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/editTextLogradouroCadastro" />
 
                 <EditText
-                    android:id="@+id/editTextCPF"
+                    android:id="@+id/editTextCPFcadastro"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -166,7 +166,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/editTextNumeroCadastro" />
 
                 <EditText
-                    android:id="@+id/editTextComplemento"
+                    android:id="@+id/editTextComplementoCadastro"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -178,10 +178,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextCPF" />
+                    app:layout_constraintTop_toBottomOf="@+id/editTextCPFcadastro" />
 
                 <EditText
-                    android:id="@+id/editTextBairro"
+                    android:id="@+id/editTextBairroCadastro"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -192,10 +192,10 @@
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextComplemento" />
+                    app:layout_constraintTop_toBottomOf="@+id/editTextComplementoCadastro" />
 
                 <EditText
-                    android:id="@+id/editTextMunicipio"
+                    android:id="@+id/editTextMunicipioCadastro"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -206,10 +206,10 @@
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextBairro" />
+                    app:layout_constraintTop_toBottomOf="@+id/editTextBairroCadastro" />
 
                 <EditText
-                    android:id="@+id/editTextEstado"
+                    android:id="@+id/editTextEstadoCadastro"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -220,7 +220,7 @@
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextMunicipio" />
+                    app:layout_constraintTop_toBottomOf="@+id/editTextMunicipioCadastro" />
 
                 <Button
                     android:id="@+id/buttonAvancarCadastro"
@@ -231,7 +231,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextEstado" />
+                    app:layout_constraintTop_toBottomOf="@+id/editTextEstadoCadastro" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
