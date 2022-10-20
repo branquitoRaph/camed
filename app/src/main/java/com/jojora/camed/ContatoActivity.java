@@ -10,16 +10,16 @@ import android.widget.ImageButton;
 
 public class ContatoActivity extends AppCompatActivity {
 
-    private ImageButton botao;
+    private ImageButton botaoimage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato);
 
-        botao = findViewById(R.id.imageButtonContatoIrPerfil);
+        botaoimage = findViewById(R.id.imageButtonContatoIrPerfil);
 
-        botao.setOnClickListener(new View.OnClickListener() {
+        botaoimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
