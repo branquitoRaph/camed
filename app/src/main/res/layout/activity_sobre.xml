@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#9EFFF7"
     tools:context=".SobreActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -24,6 +25,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:textColor="#000000"
         android:text="texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico,"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +51,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:textColor="#000000"
         android:text="texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico, texto generico,"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
