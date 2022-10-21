@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutTabela3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9EFFF7"
@@ -19,7 +20,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextPesquisa"
+        android:textColor="#000000"
+        android:backgroundTint="@android:color/black"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -28,12 +31,12 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonPesquisa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarHome" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButtonPesquisa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -43,6 +46,7 @@
         app:srcCompat="@android:drawable/ic_menu_search" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -50,7 +54,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3">
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPesquisa">
 
         <TableRow
             android:layout_width="match_parent"
@@ -58,73 +62,76 @@
             android:gravity="center_horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout"
+                android:id="@+id/ConstraintLayoutTabela1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toStartOf="@+id/textView3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageViewSintoma1"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/textViewSintoma1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sintoma1"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma1" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageViewSintoma2"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma1"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textViewSintoma2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toStartOf="@+id/textView4"
-                    app:layout_constraintStart_toEndOf="@+id/textView2"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                    android:text="Sintoma2"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma3"
+                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma1"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma2" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageViewSintoma3"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma2"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textViewSintoma3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toStartOf="@+id/textView"
-                    app:layout_constraintStart_toEndOf="@+id/textView3"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                    android:text="Sintoma3"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma4"
+                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma2"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma3" />
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageViewSintoma4"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
@@ -132,20 +139,20 @@
                     android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.689"
-                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma3"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:mipmap/sym_def_app_icon"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textViewSintoma4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="TextView"
+                    android:text="Sintoma4"
+                    android:textColor="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma3"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma4" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </TableRow>
@@ -156,96 +163,97 @@
             android:gravity="center_horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout"
+                android:id="@+id/ConstraintLayoutTabela2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageViewSintoma5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textViewSintoma5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toStartOf="@+id/textView3"
+                    android:text="Sintoma5"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma6"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma8" />
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageViewSintoma6"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma8"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textViewSintoma6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toStartOf="@+id/textView4"
-                    app:layout_constraintStart_toEndOf="@+id/textView2"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                    android:text="Sintoma6"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma7"
+                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma6" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toStartOf="@+id/textView"
-                    app:layout_constraintStart_toEndOf="@+id/textView3"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-                <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageViewSintoma7"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.689"
-                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma5"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:mipmap/sym_def_app_icon"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textViewSintoma7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:text="Sintoma7"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma8"
+                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma6"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma5" />
 
+                <ImageView
+                    android:id="@+id/imageViewSintoma8"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/textViewSintoma8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sintoma8"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma7"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </TableRow>
 
         <TableRow
@@ -254,54 +262,83 @@
             android:gravity="center_horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="284dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_width="253dp"
+                android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageViewSintoma10"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="76dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma9"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_editor_absoluteX="76dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textViewSintoma10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                    android:text="Sintoma10"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma9"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma10" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageViewSintoma9"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="76dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textViewSintoma9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
+                    android:text="Sintoma9"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toStartOf="@+id/imageViewSintoma10"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma9" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/buttonHomeIrContato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Contato"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonHomeIrSobre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/buttonHomeIrSobre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sobre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonHomeIrContato"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
