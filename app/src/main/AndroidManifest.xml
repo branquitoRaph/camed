@@ -28,14 +28,14 @@
             android:name=".MedicamentosActivity"
             android:exported="false" />
         <activity
-            android:theme="@style/Theme.CamedNoActionBar"
-            android:name=".LoginActivity"
+            android:name=".CadastroActivity"
             android:exported="false" />
         <activity
             android:theme="@style/Theme.CamedNoActionBar"
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
+            android:theme="@style/Theme.CamedNoActionBar"
             android:name=".MainActivity"
             android:exported="false" />
         <activity
@@ -43,7 +43,8 @@
             android:name=".ContatoActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroActivity"
+            android:theme="@style/Theme.CamedNoActionBar"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

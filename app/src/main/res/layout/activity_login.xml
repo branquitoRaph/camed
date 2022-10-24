@@ -7,24 +7,34 @@
     android:background="#9EFFF7"
     tools:context=".LoginActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/editTextSenhaLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:backgroundTint="@android:color/black"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
-        android:backgroundTint="@android:color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogarLogin"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNTemLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailLogin"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailLogin" />
 
     <EditText
         android:id="@+id/editTextEmailLogin"
@@ -49,6 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Logar"
+        android:textColor="@color/white"
+        android:backgroundTint="#007BFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -68,6 +80,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLogin"
         app:layout_constraintVertical_bias="0.233" />
+
+    <TextView
+        android:id="@+id/textViewNTemLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="Não possui login?"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLoginIrCadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSenhaLogin" />
+
+    <TextView
+        android:id="@+id/textViewLoginIrCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="8dp"
+        android:text="Clique Aqui"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNTemLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

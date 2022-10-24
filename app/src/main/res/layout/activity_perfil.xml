@@ -9,14 +9,15 @@
 
     <ImageView
         android:id="@+id/imageViewPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_account_box_24_pt2"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -28,6 +29,7 @@
         android:layout_marginEnd="32dp"
         android:text="SenhaUsuario"
         android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEmailPerfil" />
@@ -41,6 +43,7 @@
         android:layout_marginEnd="32dp"
         android:text="EmailUsuario"
         android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewPerfil" />
@@ -53,6 +56,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
         android:text="Mudar"
+        android:textColor="@color/white"
+        android:backgroundTint="#007BFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
