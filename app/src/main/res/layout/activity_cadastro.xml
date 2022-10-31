@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#63B8FF"
+    android:backgroundTint="#C4ECF4"
     tools:context=".CadastroActivity">
 
     <ScrollView
@@ -27,7 +27,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#9EFFF7"
+                android:background="#C4ECF4"
                 android:foregroundTint="#000000">
 
                 <TextView

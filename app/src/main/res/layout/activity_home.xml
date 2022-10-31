@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayoutTabela3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9EFFF7"
+    android:background="#C4ECF4"
     tools:context=".HomeActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -21,16 +21,17 @@
 
     <EditText
         android:id="@+id/editTextPesquisa"
-        android:textColor="#000000"
-        android:backgroundTint="@android:color/black"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:backgroundTint="@android:color/black"
         android:ems="10"
+        android:hint="Pesquise"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonPesquisa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarHome" />
@@ -78,14 +79,16 @@
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma1"
+                    android:id="@+id/textViewSintomaFebre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Febre"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma2"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma1"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma1"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma1" />
 
                 <ImageView
@@ -99,14 +102,14 @@
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma2"
+                    android:id="@+id/textViewSintomaAlergia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma2"
+                    android:text="Alergia"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma3"
-                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma1"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma2"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma2"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma2" />
 
                 <ImageView
@@ -120,39 +123,56 @@
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma3"
+                    android:id="@+id/textViewSintomaDorDeCabeca"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma3"
+                    android:text="Dor de"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma4"
-                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma2"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma3"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma3"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma3" />
 
                 <ImageView
                     android:id="@+id/imageViewSintoma4"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.689"
-                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma3"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma4"
+                    android:id="@+id/textViewSintomaDoresMusculares"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma4"
+                    android:text="Dores"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma3"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma4"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma4"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma4" />
+
+                <TextView
+                    android:id="@+id/textViewSintomaDoresMusculares2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:text="Musculares"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma4"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma4"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewSintomaDoresMusculares" />
+
+                <TextView
+                    android:id="@+id/textViewSintomaDorDeCabeca2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cabeça"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma3"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma3"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewSintomaDorDeCabeca" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </TableRow>
@@ -172,20 +192,22 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="32dp"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma6"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma5"
+                    android:id="@+id/textViewSintomaDoresIntestinais"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma5"
+                    android:layout_marginEnd="8dp"
+                    android:text="Dores"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma6"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma8"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma8"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma8" />
 
                 <ImageView
@@ -193,28 +215,30 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="32dp"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma8"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma6"
+                    android:id="@+id/textViewSintomaGases"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma6"
+                    android:layout_marginEnd="8dp"
+                    android:text="Gases"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma7"
-                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma5"
-                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma6" />
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma5"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma5" />
 
                 <ImageView
                     android:id="@+id/imageViewSintoma7"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma5"
@@ -222,36 +246,52 @@
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma7"
+                    android:id="@+id/textViewSintomaVomito"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma7"
+                    android:layout_marginEnd="8dp"
+                    android:text="Vômito"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toStartOf="@+id/textViewSintoma8"
-                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma6"
-                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma5" />
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma6"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma6"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma6" />
 
                 <ImageView
                     android:id="@+id/imageViewSintoma8"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="32dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma8"
+                    android:id="@+id/textViewSintomaDiarreia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma8"
+                    android:layout_marginEnd="8dp"
+                    android:text="Diarréia"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textViewSintoma7"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma7"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma7"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma7" />
+
+                <TextView
+                    android:id="@+id/textViewSintomaDoresIntestinais2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Intestinais"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma8"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma8"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewSintomaDoresIntestinais" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </TableRow>
@@ -266,11 +306,11 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageViewSintoma10"
+                    android:id="@+id/imageViewSintomaAzia"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="76dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma9"
@@ -281,32 +321,32 @@
                     android:id="@+id/textViewSintoma10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Sintoma10"
+                    android:text="Azia"
                     android:textColor="#000000"
-                    app:layout_constraintStart_toEndOf="@+id/imageViewSintoma9"
-                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma10" />
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintomaAzia"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintomaAzia"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSintomaAzia" />
 
                 <ImageView
                     android:id="@+id/imageViewSintoma9"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="76dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="32dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_launcher_background" />
 
                 <TextView
-                    android:id="@+id/textViewSintoma9"
+                    android:id="@+id/textViewSintomaPressao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:text="Sintoma9"
+                    android:text="Pressão"
                     android:textColor="#000000"
-                    app:layout_constraintEnd_toStartOf="@+id/imageViewSintoma10"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewSintoma9"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewSintoma9"
                     app:layout_constraintTop_toBottomOf="@+id/imageViewSintoma9" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </TableRow>

@@ -11,7 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -43,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         ImageView imagelista7 = findViewById(R.id.imageViewSintoma7);
         ImageView imagelista8 = findViewById(R.id.imageViewSintoma8);
         ImageView imagelista9 = findViewById(R.id.imageViewSintoma9);
-        ImageView imagelista10 = findViewById(R.id.imageViewSintoma10);
+        ImageView imagelista10 = findViewById(R.id.imageViewSintomaAzia);
         Button botaoHomeIrContato = findViewById(R.id.buttonHomeIrContato);
         Button botaoHomeIrSobre = findViewById(R.id.buttonHomeIrSobre);
 
