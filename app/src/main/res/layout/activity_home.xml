@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/febreimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaFebre"
@@ -99,7 +99,7 @@
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma1"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/alergiaimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaAlergia"
@@ -120,7 +120,7 @@
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma2"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/dordecabecaimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaDorDeCabeca"
@@ -141,7 +141,7 @@
                     android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/doresmuscularesimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaDoresMusculares"
@@ -195,7 +195,7 @@
                     android:layout_marginTop="32dp"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma6"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/gasesimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaDoresIntestinais"
@@ -218,7 +218,7 @@
                     android:layout_marginTop="32dp"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma8"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/vomitoimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaGases"
@@ -243,7 +243,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma5"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/diarreiaimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaVomito"
@@ -266,7 +266,7 @@
                     android:layout_marginTop="32dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/doresintestinaisimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaDiarreia"
@@ -315,7 +315,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageViewSintoma9"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/aziaimg" />
 
                 <TextView
                     android:id="@+id/textViewSintoma10"
@@ -336,7 +336,7 @@
                     android:layout_marginTop="32dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    app:srcCompat="@drawable/pressaoimg" />
 
                 <TextView
                     android:id="@+id/textViewSintomaPressao"
