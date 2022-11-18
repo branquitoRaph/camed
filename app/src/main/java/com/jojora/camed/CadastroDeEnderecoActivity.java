@@ -10,25 +10,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CadastroActivity extends AppCompatActivity {
+public class CadastroDeEnderecoActivity extends AppCompatActivity {
 
     private Button botao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro);
+        setContentView(R.layout.activity_cadastro_de_endereco);
 
         ActionBar bar = getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#6368FF")));
 
-        botao = findViewById(R.id.buttonAvancarCadastro);
+        botao = findViewById(R.id.buttonAvancarCadastroEndereco);
 
         botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
+                Intent intent = new Intent(CadastroDeEnderecoActivity.this, PerfilActivity.class);
                 startActivity(intent);
             }
         });

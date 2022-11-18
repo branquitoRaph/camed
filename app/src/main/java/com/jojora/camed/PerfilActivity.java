@@ -13,6 +13,7 @@ import android.widget.Button;
 public class PerfilActivity extends AppCompatActivity {
 
     private Button botao;
+    private Button cadastroEndereco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +24,22 @@ public class PerfilActivity extends AppCompatActivity {
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#6368FF")));
 
         botao = findViewById(R.id.buttonMudarPerfil);
+        cadastroEndereco = findViewById(R.id.buttonIrCadastrarEndereco);
 
         botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(PerfilActivity.this, MudarPerfilActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cadastroEndereco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(PerfilActivity.this, CadastroDeEnderecoActivity.class);
                 startActivity(intent);
             }
         });

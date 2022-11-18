@@ -25,11 +25,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:backgroundTint="#007BFF"
         android:text="Alterar"
         android:textColor="@color/white"
-        android:backgroundTint="#007BFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAlterar" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonMudarImagem" />
 
     <EditText
         android:id="@+id/editTextMudarEmail"
@@ -46,7 +46,7 @@
         android:textColorHint="#000000"
         android:textColorLink="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAlterar" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonMudarImagem" />
 
     <ImageView
         android:id="@+id/imageViewAlterar"
@@ -68,12 +68,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:backgroundTint="#007BFF"
         android:text="Mudar Imagem"
         android:textColor="@color/white"
-        android:backgroundTint="#007BFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMudarSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAlterar" />
 
     <EditText
         android:id="@+id/editTextMudarSenha"
@@ -91,4 +91,17 @@
         android:textColorLink="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMudarEmail" />
+
+    <Button
+        android:id="@+id/buttonMudarPerfilVoltarPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Voltar"
+        android:backgroundTint="#007BFF"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMudarSenha" />
 </androidx.constraintlayout.widget.ConstraintLayout>

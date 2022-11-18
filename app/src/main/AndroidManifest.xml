@@ -14,9 +14,12 @@
         android:theme="@style/Theme.Camed"
         tools:targetApi="31">
         <activity
-            android:theme="@style/Theme.CamedNoActionBar"
-            android:name=".SobreActivity"
+            android:name=".CadastroDeEnderecoActivity"
             android:exported="false" />
+        <activity
+            android:name=".SobreActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CamedNoActionBar" />
         <activity
             android:name=".PerfilActivity"
             android:exported="false" />
@@ -24,28 +27,28 @@
             android:name=".MudarPerfilActivity"
             android:exported="false" />
         <activity
-            android:theme="@style/Theme.CamedNoActionBar"
             android:name=".MedicamentosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CamedNoActionBar" />
         <activity
             android:name=".CadastroActivity"
             android:exported="false" />
         <activity
-            android:theme="@style/Theme.CamedNoActionBar"
             android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CamedNoActionBar" />
         <activity
-            android:theme="@style/Theme.CamedNoActionBar"
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CamedNoActionBar" />
         <activity
-            android:theme="@style/Theme.CamedNoActionBar"
             android:name=".ContatoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CamedNoActionBar" />
         <activity
-            android:theme="@style/Theme.CamedNoActionBar"
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.CamedNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
