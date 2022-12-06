@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C4ECF4"
-    tools:context=".MudarPerfilActivity">
+    tools:context=".activity.MudarPerfilActivity">
 
     <Button
         android:id="@+id/buttonMudarSenha"

@@ -1,4 +1,4 @@
-package com.jojora.camed;
+package com.jojora.camed.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.jojora.camed.R;
 
 public class HomeActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.jojora.camed;
+package com.jojora.camed.activity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.jojora.camed.R;
 
 public class PerfilActivity extends AppCompatActivity {
 

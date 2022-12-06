@@ -1,4 +1,4 @@
-package com.jojora.camed;
+package com.jojora.camed.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,8 +9,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
+
+import com.jojora.camed.R;
 
 public class MedicamentosActivity extends AppCompatActivity {
 

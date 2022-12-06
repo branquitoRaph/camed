@@ -1,4 +1,4 @@
-package com.jojora.camed;
+package com.jojora.camed.activity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,27 +10,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MudarPerfilActivity extends AppCompatActivity {
+import com.jojora.camed.R;
 
-    private Button voltarParaPerfil;
+public class CadastroDeEnderecoActivity extends AppCompatActivity {
+
+    private Button botao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mudar_perfil);
+        setContentView(R.layout.activity_cadastro_de_endereco);
 
         ActionBar bar = getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#6368FF")));
 
-        voltarParaPerfil = findViewById(R.id.buttonMudarPerfilVoltarPerfil);
+        botao = findViewById(R.id.buttonAvancarCadastroEndereco);
 
-        voltarParaPerfil.setOnClickListener(new View.OnClickListener() {
+        botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(MudarPerfilActivity.this, PerfilActivity.class);
+                Intent intent = new Intent(CadastroDeEnderecoActivity.this, PerfilActivity.class);
                 startActivity(intent);
             }
         });
     }
+
 }

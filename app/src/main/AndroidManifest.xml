@@ -14,39 +14,39 @@
         android:theme="@style/Theme.Camed"
         tools:targetApi="31">
         <activity
-            android:name=".CadastroDeEnderecoActivity"
+            android:name=".activity.CadastroDeEnderecoActivity"
             android:exported="false" />
         <activity
-            android:name=".SobreActivity"
+            android:name=".activity.SobreActivity"
             android:exported="false"
             android:theme="@style/Theme.CamedNoActionBar" />
         <activity
-            android:name=".PerfilActivity"
+            android:name=".activity.PerfilActivity"
             android:exported="false" />
         <activity
-            android:name=".MudarPerfilActivity"
+            android:name=".activity.MudarPerfilActivity"
             android:exported="false" />
         <activity
-            android:name=".MedicamentosActivity"
+            android:name=".activity.MedicamentosActivity"
             android:exported="false"
             android:theme="@style/Theme.CamedNoActionBar" />
         <activity
-            android:name=".CadastroActivity"
+            android:name=".activity.CadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activity.HomeActivity"
             android:exported="false"
             android:theme="@style/Theme.CamedNoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="false"
             android:theme="@style/Theme.CamedNoActionBar" />
         <activity
-            android:name=".ContatoActivity"
+            android:name=".activity.ContatoActivity"
             android:exported="false"
             android:theme="@style/Theme.CamedNoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.CamedNoActionBar">
             <intent-filter>

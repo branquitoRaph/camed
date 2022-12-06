@@ -1,8 +1,10 @@
-package com.jojora.camed;
+package com.jojora.camed.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.jojora.camed.R;
 
 public class MainActivity extends AppCompatActivity {
 
