@@ -30,11 +30,11 @@ public class CamedRepositorio {
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
         HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL + "cadastro.php", "POST", "UTF-8");
-        httpRequest.addParam("novo_email", newEmail);
-        httpRequest.addParam("nova_senha", newSenha);
-        httpRequest.addParam("novo_nome", newNome);
-        httpRequest.addParam("nova_sobrenome", newSobrenome);
-        httpRequest.addParam("novo_data_de_nascimento", newDataDeNascimento);
+        httpRequest.addParam("email", newEmail);
+        httpRequest.addParam("senha", newSenha);
+        httpRequest.addParam("nome", newNome);
+        httpRequest.addParam("sobrenome", newSobrenome);
+        httpRequest.addParam("nascimento", newDataDeNascimento);
 
         String result = "";
         try {
