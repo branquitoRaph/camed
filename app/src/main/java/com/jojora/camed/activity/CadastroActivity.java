@@ -2,6 +2,9 @@ package com.jojora.camed.activity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -13,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.jojora.camed.R;
+import com.jojora.camed.model.CadastroViewModel;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -25,6 +29,8 @@ public class CadastroActivity extends AppCompatActivity {
 
         ActionBar bar = getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#6368FF")));
+
+        CadastroViewModel vm = new ViewModelProvider(this).get(CadastroViewModel.class);
 
         botao = findViewById(R.id.buttonAvancarCadastro);
 
@@ -83,6 +89,23 @@ public class CadastroActivity extends AppCompatActivity {
                     Toast.makeText(CadastroActivity.this, "Data de nascimento não preenchida", Toast.LENGTH_LONG).show();
                     return;
                 }
+
+                LiveData<Boolean> resultadoLD = vm.cadastrar(newEmail, newSenha, newNome, newSobrenome, newDataDeNascimento);
+
+                resultadoLD.observe(CadastroActivity.this, new Observer<Boolean>() {
+                    @Override
+                    public void onChanged(Boolean aBoolean) {
+                        if(aBoolean) {
+                            Toast.makeText(CadastroActivity.this, "Novo usuario registrado com sucesso", Toast.LENGTH_LONG).show();
+                            finish();
+                        }
+                        else {
+                            // Se o cadastro não deu certo, apenas continuamos na tela de cadastro e
+                            // indicamos com uma mensagem ao usuário que o cadastro não deu certo.
+                            Toast.makeText(CadastroActivity.this, "Erro ao registrar novo usuário", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
 
                 Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
                 startActivity(intent);

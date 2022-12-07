@@ -39,21 +39,22 @@
             android:theme="@style/Theme.CamedNoActionBar" />
         <activity
             android:name=".activity.MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.CamedNoActionBar" />
+            android:exported="true"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.ContatoActivity"
             android:exported="false"
             android:theme="@style/Theme.CamedNoActionBar" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.CamedNoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -29,7 +29,7 @@ public class CamedRepositorio {
     public boolean cadastrar(String newEmail, String newSenha, String newNome, String newSobrenome, String newDataDeNascimento) {
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
-        HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL + "cadastro.php", "POST", "UTF-8");
+        HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL + "cadastrar.php", "POST", "UTF-8");
         httpRequest.addParam("email", newEmail);
         httpRequest.addParam("senha", newSenha);
         httpRequest.addParam("nome", newNome);
