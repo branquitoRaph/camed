@@ -26,7 +26,6 @@ import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button botao;
     private TextView irCadastro;
 
     @Override
@@ -34,7 +33,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        botao = findViewById(R.id.buttonLogarLogin);
         irCadastro = findViewById(R.id.textViewLoginIrCadastro);
 
         // A função que entra em contato com o servidor web está definida dentro da ViewModel
@@ -98,15 +96,6 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
-            }
-        });
-
-        botao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
             }
         });
 
