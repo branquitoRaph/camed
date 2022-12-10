@@ -11,12 +11,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CamedRepositorio {
+public class MedicamentoPagingSource {
 
     Context context;
     public CamedRepositorio(Context context) {
@@ -29,15 +30,12 @@ public class CamedRepositorio {
      * @param newSenha a senha do novo usuário
      * @return true se o usuário foi cadastrado e false caso contrário
      */
-    public boolean cadastrar(String newEmail, String newSenha, String newNome, String newSobrenome, String newDataDeNascimento) {
+    public boolean register(String newEmail, String newSenha) {
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
         HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL + "cadastrar.php", "POST", "UTF-8");
-        httpRequest.addParam("email", newEmail);
-        httpRequest.addParam("senha", newSenha);
-        httpRequest.addParam("nome", newNome);
-        httpRequest.addParam("sobrenome", newSobrenome);
-        httpRequest.addParam("nascimento", newDataDeNascimento);
+        httpRequest.addParam("novo_login", newEmail);
+        httpRequest.addParam("nova_senha", newSenha);
 
         String result = "";
         try {
@@ -89,7 +87,7 @@ public class CamedRepositorio {
      * @param senha a senha do usuário
      * @return true se o usuário  foi autenticado, false caso contrário
      */
-    public boolean logar(String email, String senha) {
+    public boolean login(String email, String senha) {
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
         HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL + "login.php", "POST", "UTF-8");
@@ -139,19 +137,32 @@ public class CamedRepositorio {
     }
 
     /**
-     * Método que cria uma requisição HTTP para registrar um novo usuário junto ao servidor web.
-     * @param newDescriCategoria o login do novo usuário
-     * @param newDescriMensagem a senha do novo usuário
-     * @param newContatoEmail a senha do novo usuário
-     * @return true se o contato foi cadastrado e false caso contrário
+     * Método que cria uma requisição HTTP para cadastrar um novo produto junto ao servidor web.
+     * @param nomeMedicamento nome do produto
+     * @param pmvc preço do produto
+     * @param necessarioReceita descrição do produto
+     * @return true se o produto foi cadastrado junto ao servidor, false caso contrário
      */
-    public boolean contato(String newDescriCategoria, String newContatoEmail, String newDescriMensagem) {
+    public boolean addMedicamento(String nomeMedicamento, String pmvc, String necessarioReceita) {
+
+        // Para cadastrar um produto, é preciso estar logado. Então primeiro otemos o login e senha
+        // salvos na app.
+        String email = Config.getLogin(context);
+        String senha = Config.getPassword(context);
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
-        HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL + "contato.php", "POST", "UTF-8");
-        httpRequest.addParam("descriCategoria", newDescriCategoria);
-        httpRequest.addParam("emailContato", newContatoEmail);
-        httpRequest.addParam("descriMensagem", newDescriMensagem);
+        HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL + "criar_produto.php", "POST", "UTF-8");
+        httpRequest.addParam("nomeMedicamento", nomeMedicamento);
+        httpRequest.addParam("pmvc", pmvc);
+        httpRequest.addParam("necessarioReceita", necessarioReceita);
+
+        // Para esta ação, é preciso estar logado. Então na requisição HTTP setamos o login e senha do
+        // usuário. Ao executar a requisição, o login e senha do usuário serão enviados ao servidor web,
+        // o qual verificará se o login e senha batem com aquilo que está no BD. Somente depois dessa
+        // verificação de autenticação é que o servidor web irá realizar esta ação.
+        httpRequest.setBasicAuth(email, senha);
+
+
 
         String result = "";
         try {
@@ -168,13 +179,13 @@ public class CamedRepositorio {
             //
             // Em caso de falha, será retornada uma String JSON no formato:
             //
-            // {"sucesso":0, "erro":"usuario já existe"}
+            // {"sucesso":0,"erro":"Erro ao criar produto"}
             result = Util.inputStream2String(is, "UTF-8");
-
-            Log.i("HTTP REGISTER RESULT", result);
 
             // Fecha a conexão com o servidor web.
             httpRequest.finish();
+
+            Log.i("HTTP ADD PRODUCT RESULT", result);
 
             // A classe JSONObject recebe como parâmetro do construtor uma String no formato JSON e
             // monta internamente uma estrutura de dados similar ao dicionário em python.
@@ -183,7 +194,7 @@ public class CamedRepositorio {
             // obtem o valor da chave sucesso para verificar se a ação ocorreu da forma esperada ou não.
             int success = jsonObject.getInt("sucesso");
 
-            // Se sucesso igual a 1, significa que o usuário foi registrado com sucesso.
+            // Se sucesso igual a 1, significa que o produto foi adicionado com sucesso.
             if(success == 1) {
                 return true;
             }
@@ -194,13 +205,18 @@ public class CamedRepositorio {
             Log.e("HTTP RESULT", result);
         }
         return false;
-
     }
 
-    public List<Medicamento> loadProducts(Integer limit, Integer offSet) {
+    /**
+     * Método que cria uma requisição HTTP para obter uma página/bloco de produtos junto ao servidor web.
+     * @param limit a quantidade de produtos a serem obtidos
+     * @param offSet a posição a partir da qual a página de produtos deve começar
+     * @return lista de produtos
+     */
+    public List<Medicamento> carregaMedicamento(Integer limit, Integer offSet) {
 
         // cria a lista de produtos incicialmente vazia, que será retornada como resultado
-        List<Medicamento> productsList = new ArrayList<>();
+        List<Medicamento> medicamentoList = new ArrayList<>();
 
         // Para obter a lista de produtos é preciso estar logado. Então primeiro otemos o login e senha
         // salvos na app.
@@ -208,7 +224,7 @@ public class CamedRepositorio {
         String password = Config.getPassword(context);
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
-        HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL +"pegar_medicamento.php", "GET", "UTF-8");
+        HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL +"pegar_medicamentos.php", "GET", "UTF-8");
         httpRequest.addParam("limit", limit.toString());
         httpRequest.addParam("offset", offSet.toString());
 
@@ -259,27 +275,27 @@ public class CamedRepositorio {
 
                 // A chave produtos é um array de objetos do tipo json (JSONArray), onde cada um desses representa
                 // um produto
-                JSONArray jsonArray = jsonObject.getJSONArray("produtos");
+                JSONArray jsonArray = jsonObject.getJSONArray("Medicamentos");
 
                 // Cada elemento do JSONArray é um JSONObject que guarda os dados de um produto
                 for(int i = 0; i < jsonArray.length(); i++) {
 
                     // Obtemos o JSONObject referente a um produto
-                    JSONObject jProduct = jsonArray.getJSONObject(i);
+                    JSONObject jMEdicamento = jsonArray.getJSONObject(i);
 
                     // Obtemos os dados de um produtos via JSONObject
-                    String pid = jProduct.getString("id");
-                    String name = jProduct.getString("nome");
-                    String price = jProduct.getString("preco");
+                    String necessarioReceita = jMEdicamento.getString("necessarioReceita");
+                    String nomeMedicamento = jMEdicamento.getString("nome");
+                    String pmvc = jMEdicamento.getString("pmvc");
 
                     // Criamo um objeto do tipo Product para guardar esses dados
-                    Med product = new Product();
-                    product.id = pid;
-                    product.name = name;
-                    product.price = price;
+                    Medicamento medicamento = new Medicamento();
+                    medicamento.necessarioReceita = necessarioReceita;
+                    medicamento.nomeMedicamento = nomeMedicamento;
+                    medicamento.pmvc = pmvc;
 
                     // Adicionamos o objeto product na lista de produtos
-                    productsList.add(product);
+                    medicamentoList.add(medicamento);
                 }
             }
         } catch (IOException e) {
@@ -289,7 +305,7 @@ public class CamedRepositorio {
             Log.e("HTTP RESULT", result);
         }
 
-        return productsList;
+        return medicamentoList;
     }
 
     /**
@@ -297,7 +313,7 @@ public class CamedRepositorio {
      * @param id id do produto que se deseja obter os detalhes
      * @return objeto do tipo product contendo os detalhes do produto
      */
-    Medicamento loadProductDetail(String idMedicamento, String nomeMedicamento, String pmvc, String necessarioReceita) {
+    Product loadProductDetail(String id) {
 
         // Para obter a lista de produtos é preciso estar logado. Então primeiro otemos o login e senha
         // salvos na app.
@@ -305,17 +321,14 @@ public class CamedRepositorio {
         String password = Config.getPassword(context);
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
-        HttpRequest httpRequest = new HttpRequest(Config.CAMED_APP_URL + "pegar_medicamento.php", "GET", "UTF-8");
-        httpRequest.addParam("idMedicamento", idMedicamento);
-        httpRequest.addParam("nomeMedicamento", nomeMedicamento);
-        httpRequest.addParam("pmvc", pmvc);
-        httpRequest.addParam("necessarioReceita", necessarioReceita);
+        HttpRequest httpRequest = new HttpRequest(Config.PRODUCTS_APP_URL + "pegar_detalhes_produto.php", "GET", "UTF-8");
+        httpRequest.addParam("id", id);
 
         // Para esta ação, é preciso estar logado. Então na requisição HTTP setamos o login e senha do
         // usuário. Ao executar a requisição, o login e senha do usuário serão enviados ao servidor web,
         // o qual verificará se o login e senha batem com aquilo que está no BD. Somente depois dessa
         // verificação de autenticação é que o servidor web irá realizar esta ação.
-        //httpRequest.setBasicAuth(login, password);
+        httpRequest.setBasicAuth(login, password);
 
         String result = "";
         try {
@@ -354,15 +367,20 @@ public class CamedRepositorio {
                 // obtém os dados detalhados do produto. A imagem não vem junto. Ela é obtida
                 // separadamente depois, no momento em que precisa ser exibida na app. Isso permite
                 // que os dados trafeguem mais rápido.
-                String nomeMedicamento = jsonObject.getString("nomeMedicamento");
-                String pmvc = jsonObject.getString("pmvc");
-                String necessarioReceita = jsonObject.getString("necessarioReceita");
+                String name = jsonObject.getString("nome");
+                String price = jsonObject.getString("preco");
+                String description = jsonObject.getString("descricao");
+                String createdBy = jsonObject.getString("criado_por");
+                String createdAt = jsonObject.getString("criado_em");
 
                 // Cria um objeto Product e guarda os detalhes do produto dentro dele.
                 Medicamento p = new Medicamento();
                 p.nomeMedicamento = nomeMedicamento;
-                p.pmvc = pmvc;
-                p.necessarioReceita = necessarioReceita;
+                p.id = id;
+                p.price = price;
+                p.description = description;
+                p.createdBy = createdBy;
+                p.createdAt = createdAt;
 
                 return p;
             }
