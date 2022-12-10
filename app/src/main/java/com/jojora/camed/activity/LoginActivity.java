@@ -27,12 +27,15 @@ import java.util.List;
 public class LoginActivity extends AppCompatActivity {
 
     private TextView irCadastro;
+    private Button irContato;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+        irContato = findViewById(R.id.buttonLogarContato);
         irCadastro = findViewById(R.id.textViewLoginIrCadastro);
 
         // A função que entra em contato com o servidor web está definida dentro da ViewModel
@@ -108,13 +111,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        irContato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(LoginActivity.this, ContatoActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.login_activity_tb, menu);
-        return true;
-    }
 }

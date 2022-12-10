@@ -52,12 +52,10 @@
         </activity>
         <activity
             android:name=".activity.ContatoActivity"
-            android:exported="false"
-            android:theme="@style/Theme.CamedNoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="false"
-            android:theme="@style/Theme.CamedNoActionBar">
+            android:exported="false">
         </activity>
     </application>
 

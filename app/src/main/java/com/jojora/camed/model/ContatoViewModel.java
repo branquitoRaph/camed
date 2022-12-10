@@ -7,24 +7,24 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class CadastroViewModel extends AndroidViewModel {
+public class ContatoViewModel extends AndroidViewModel {
 
-    public CadastroViewModel(@NonNull Application application) {
+    public ContatoViewModel(@NonNull Application application) {
         super(application);
     }
 
     /**
      * Método que cria e executa uma requisição ao servidor web para adicionar um novo usuário
      * na base de dados do servidor
-     * @param newEmail login do usuário
-     * @param newSenha senha do usuário
+     * @param newDescriCategoria descrição de categorias
+     * @param newDescriMensagem descrição de mensagem
+     * @param newContatoEmail email da mensagem
      * @return um LiveData que vai conter a resposta do servidor quando esta estiver disponível
      */
-    public LiveData<Boolean> cadastrar(String newEmail, String newSenha, String newNome, String newSobrenome, String NewDataDeNascimento) {
+    public LiveData<Boolean> contato(String newDescriCategoria, String newContatoEmail, String newDescriMensagem) {
 
         // Cria um container do tipo MutableLiveData (um LiveData que pode ter seu conteúdo alterado).
         MutableLiveData<Boolean> result = new MutableLiveData<>();
@@ -51,7 +51,7 @@ public class CadastroViewModel extends AndroidViewModel {
                 // O método login envia os dados de novo usuário ao servidor. Ele retorna
                 // um booleano indicando true caso o cadastro de novo usuário tenha sido feito com sucesso e false
                 // em caso contrário
-                boolean b = camedRepositorio.cadastrar(newEmail, newSenha, newNome, newSobrenome, NewDataDeNascimento);
+                boolean b = camedRepositorio.contato(newDescriCategoria, newContatoEmail, newDescriMensagem);
 
                 // Aqui postamos o resultado da operação dentro do LiveData. Quando fazemos isso,
                 // quem estiver observando o LiveData será avisado de que o resultado está disponível.

@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 public class Config {
 
     // endereço base do servidor web
-    public static String CAMED_APP_URL = "http://10.0.2.2/mobile/";
+    public static String CAMED_APP_URL = "http://10.0.2.2/camed_novo/mobile/";
 
     /**
      * Salva o login no espaço reservado da app
