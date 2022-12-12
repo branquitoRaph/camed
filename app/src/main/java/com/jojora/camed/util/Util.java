@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.util.Base64;
 import android.util.DisplayMetrics;
 
+import androidx.annotation.NonNull;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -26,7 +28,7 @@ public class Util {
      * @param columnWidthDp largura do item do grid em dp
      * @return numero de colunas a serem usadas no GridLayoutManager
      */
-    public static int calculateNoOfColumns(Context context, float columnWidthDp) { // For example columnWidthdp=180
+    public static int calculateNoOfColumns(@NonNull Context context, float columnWidthDp) { // For example columnWidthdp=180
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         float screenWidthDp = displayMetrics.widthPixels;
         int noOfColumns = (int) (screenWidthDp / columnWidthDp + 0.5); // +0.5 for correct rounding to int.
